@@ -1,0 +1,43 @@
+{
+  "name": "tekintian/http-foundation",
+  "version": "5.4.x-dev",
+  "description": "从symfony/http-foundation完全精简独立出来的 HttpFoundation Component.",
+  "type": "library",
+  "keywords": ["http","HttpFoundation","Component"],
+  "homepage": "https://github.com/tekintian/http-foundation",
+  "license": "MIT",
+
+  "authors": [
+    {
+      "name": "Tekin",
+      "email": "tekintian@gmail.com",
+      "homepage": "https://dev.yunnan.ws/",
+      "role": "Owner"
+    }
+  ],
+
+  "support": {
+    "email": "tekintian@gmail.com",
+    "issues": "https://github.com/tekintian/http-foundation/issues/new",
+    "source": "https://github.com/tekintian/http-foundation"
+  },
+
+  "require": {
+    "php": ">=7.2.5",
+    "symfony/polyfill-mbstring": "~1.1",
+    "symfony/polyfill-php80": "^1.16"
+  },
+  "autoload": {
+    "psr-4": {
+      "tekintian\\HttpFoundation\\": "src/",
+      "exclude-from-classmap": [
+            "/Tests/"
+        ]
+    }
+  },
+
+  "suggest": {
+    "predis/predis": "For using RedisRepository"
+  }
+
+}
