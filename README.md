@@ -21,13 +21,13 @@ composer require symfony/rate-limiter
 
 ~~~php
 <?php
-  
+
 require_once('/path/to/vendor/autoload.php'); //Load with ClassLoader
 
-use tekintian\HttpFoundation\Request;
+use Tekintian\HttpFoundation\Request;
 
-use tekintian\HttpFoundation\Response;
-	
+use Tekintian\HttpFoundation\Response;
+
 
 $request = Request::createFromGlobals();
 
@@ -61,10 +61,10 @@ if($this->use_chunked_encoding)
 
 ## Request
 
-The most common way to create a request is to base it on the current PHP global variables with [createFromGlobals()](https://github.com/symfony/symfony/blob/6.3/src/Symfony/Component/HttpFoundation/Request.php#:~:text=function createFromGlobals):
+The most common way to create a request is to base it on the current PHP global variables with createFromGlobals():
 
 ```
-use Symfony\Component\HttpFoundation\Request;
+use Tekintian\HttpFoundation\Request;
 
 $request = Request::createFromGlobals();
 ```
@@ -83,7 +83,7 @@ $request = new Request(
 );
 ```
 
-### [Accessing Request Data](https://symfony.com/doc/current/components/http_foundation.html#accessing-request-data)
+### Accessing Request Data
 
 A Request object holds information about the client request. This information can be accessed via several public properties:
 
